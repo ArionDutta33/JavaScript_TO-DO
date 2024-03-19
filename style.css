@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .1fr 1fr;
+    grid-template-areas: "navbar navbar"
+        "todo-input todo-display";
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BNCE" 0,
+        "INFM" 0,
+        "SPAC" 0;
+
+    grid-area: navbar;
+    background-color: #fb8500;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo {
+    height: 4rem;
+}
+
+.logo a>img {
+    height: 100%;
+}
+
+.todo-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: todo-input;
+    background-color: #00b4d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.todo-display {
+    grid-area: todo-display;
+    background-color: #fdf0d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-input .txt {
+
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    font-size: 5rem;
+    margin-left: 12rem;
+    color: white;
+}
+
+.todo-input input {
+    width: 26rem;
+    height: 4rem;
+    outline: none;
+    border: 3px solid grey;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+
+
+}
+
+
+
+.task-container {
+    border: 1px solid red;
+    max-height: 36rem;
+    /*? no height expand*/
+    width: 38rem;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    padding: 3rem 3rem;
+    overflow-y: scroll;
+}
+
+.plus {
+    margin-left: .4rem;
+    border-radius: .8rem;
+}
+
+button>i {
+    font-size: 3.3rem;
+    padding: 1rem;
+
+}
+
+/* ------js------ */
+.task-show {
+
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    font-size: 1rem;
+    /* height: 4rem; */
+    /*? no height expand*/
+    border-radius: .8rem;
+    background-color: #fb8500;
+    color: white;
+    padding: 1rem 1rem;
+    border: 1px solid red;
+    margin-bottom: 1rem;
+}
+
+.dl_clr {
+    height: 2rem;
+}
