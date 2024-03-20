@@ -115,24 +115,34 @@ body {
 
 
 .task-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    height: auto;
     max-height: 36rem;
     /*? no height expand*/
     width: 38rem;
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    padding: 3rem 3rem;
-    overflow-y: scroll;
+    /* border-top-right-radius: 3rem; */
+    /* border-top-left-radius: 3rem; */
+    /* padding: 0 3rem; */
+    overflow-y: auto;
 }
 
 .plus {
     margin-left: .4rem;
     border-radius: .8rem;
+    height: 4rem;
+    position: relative;
+    top: .6rem;
+}
+
+.plus>i {
+    font-size: 2rem;
+    color: orange;
 }
 
 button>i {
     font-size: 3.3rem;
     padding: 1rem;
+
 
 }
 
@@ -146,17 +156,121 @@ button>i {
     font-variation-settings:
         "wdth" 100,
         "YTLC" 500;
-    font-size: 1rem;
-    /* height: 4rem; */
+    font-size: 2rem;
+
     /*? no height expand*/
     border-radius: .8rem;
-    background-color: #fb8500;
-    color: white;
-    padding: 1rem 1rem;
-    border: 1px solid red;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    /* padding: 1rem 1rem; */
+    /* border: 1px solid red; */
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.dl_clr {
-    height: 2rem;
+.delete {
+    height: 2.7 rem;
+    width: 5rem;
+    /* margin-left: 21rem; */
+    position: relative;
+
+    right: .1rem;
+    border: none;
+    outline: none;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.23rem;
+    border-radius: 1rem;
+    background-color: #fb8500;
+    color: white;
+}
+
+
+
+.done {
+    height: 2.7rem;
+    width: 5rem;
+    /* margin-left: 21rem; */
+    position: relative;
+    border-radius: 1rem;
+    right: .1rem;
+    border: none;
+    outline: none;
+    margin-bottom: .6rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a9d8f;
+
+}
+
+.done i {
+    font-size: 2em;
+    color: white;
+}
+
+
+/* ----media---- */
+
+@media (max-width: 1415px) {
+    body {
+
+        grid-template-columns: 1;
+        grid-template-rows: .2fr 1fr 1fr;
+        grid-template-areas: "navbar"
+            "todo-input"
+            "todo-display";
+    }
+
+    .navbar {
+        width: 100vw;
+        grid-area: navbar;
+    }
+
+    .todo-input {
+        width: 100vw;
+        grid-area: todo-input;
+    }
+
+
+
+    .todo-input .txt {
+        font-size: 2.7rem;
+        margin-left: 2rem;
+    }
+
+    .todo-display {
+        width: 100vw;
+        grid-area: todo-display;
+    }
+}
+
+@media (max-width: 674px) {
+    .todo-input .txt {
+        font-size: 2rem;
+
+    }
+
+    .todo-input input {
+        width: 16rem;
+        font-size: 1rem;
+    }
 }
